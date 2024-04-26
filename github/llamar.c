@@ -6,7 +6,7 @@
 /*   By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 16:10:45 by bemacho-          #+#    #+#             */
-/*   Updated: 2024/04/15 13:07:19 by bemacho-         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:02:38 by bemacho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int	 main(void)
 {
 	//int	A = 'a';
-	int letra  = 'i';
+	//int letra  = 'i';
 	//int F = 'i';
 	//int	B = '2';
 	//int	C = '=';
@@ -32,17 +32,21 @@ int	 main(void)
 	//char	z = '/';
 	//const char s2[] = "hola";
 	//char e[] = "this is a test molon";
-	char g[] = "hola amigos igoigo";
+	//char g[] = "hola amigos igoigo";
 	//char r[] = "hola";
 	//char t[] = "mundo";
 	//size_t ro = ft_strlcpy (c, s, 4);
 	//char f = (char) ft_bzero(e,4);
-	//const char *largestring = "Foo Bar Baz";
-	//const char *smallstring = "Bar";
+	const char *largestring = "Foo Bar Baz";
+	const char *smallstring = "hello";
 	//char *ptr;
-	//char *ptr2;
 	//ptr = strnstr(largestring, smallstring, 7);
-	//ptr2 = ft_strnstr(largestring, smallstring, 7);
+	char *ptr2 = ft_strnstr(largestring, smallstring, 7);
+	char *pointer = ft_calloc (3, 3);
+	//char *si = ft_strdup(s2);
+	//char *no = ft_substr(s2, 1, 2);
+	//char *sip = ft_strjoin(s2, D);
+	//char *nop = ft_strjoin("a", "b");
 
 	/*printf("%d.tiene que dar 1 \n", ft_isdigit(B));
 	printf("%d.tiene que dar 1 \n", ft_isalpha(A));
@@ -88,7 +92,15 @@ int	 main(void)
 	//printf("%d.\n", memcmp(largestring, smallstring, 3));
 	//printf("%d.\n", ft_memcmp(largestring, smallstring, 3));
 	//printf("%d.\n", ft_memcmp(largestring, largestring, 3));
-	printf("%s.\n", ft_memchr(g, letra, 8));
-	printf("%s.\n", memchr(g, letra, 8));
-	printf("%s.\n", calloc(3, 2));
+	//printf("%s.\n", ft_memchr(g, letra, 8));
+	//printf("%s.\n", memchr(g, letra, 8));
+	printf("%s.\n", &pointer[2]);
+	//printf("%s.\n", si);
+	//printf("%s.\n", no);
+	//printf("%s.\n", ft_substr("Bonjour comment ca va?", 5, 8));
+	//ft_putchar_fd('c', 1);
+	//ft_putstr_fd(&ptr2[2], 1);
+	ft_putendl_fd(&ptr2[2], 1); 
+	//printf("%s.\n", sip);
+	//printf("%s.\n", nop);
 }

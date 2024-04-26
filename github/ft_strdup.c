@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 14:32:00 by bemacho-          #+#    #+#             */
-/*   Updated: 2024/04/17 12:51:25 by bemacho-         ###   ########.fr       */
+/*   Created: 2024/04/17 12:37:43 by bemacho-          #+#    #+#             */
+/*   Updated: 2024/04/17 12:50:07 by bemacho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
+#include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *s1)
 {
+	char	*a;
 	size_t	i;
 
+	a = (char *)malloc(ft_strlen (s1));
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i <= n && n != 0)
+	while (i <= ft_strlen (s1))
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
+		a[i] = s1[i];
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (a);
 }

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 14:32:00 by bemacho-          #+#    #+#             */
-/*   Updated: 2024/04/17 12:51:25 by bemacho-         ###   ########.fr       */
+/*   Created: 2024/04/24 15:46:04 by bemacho-          #+#    #+#             */
+/*   Updated: 2024/04/24 16:11:56 by bemacho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i <= n && n != 0)
+	if (n == -2147483648)
+		ft_putchar_fd("-2147483648", fd);
+	else
 	{
-		if (s1[i] != s2[i])
+		if (n < 0)
 		{
-			return (s1[i] - s2[i]);
+			ft_putchar_fd('-', 1);
+			n = n * -1;
 		}
-		i++;
-	}
-	return (s1[i] - s2[i]);
+		if (n >= 9)
+		{
+		
 }

@@ -6,7 +6,7 @@
 #    By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/12 15:16:30 by bemacho-          #+#    #+#              #
-#    Updated: 2024/04/15 13:05:54 by bemacho-         ###   ########.fr        #
+#    Updated: 2024/04/24 17:57:11 by bemacho-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,16 @@ MY_SOURCES = ft_isalpha.c \
 			 ft_strlcat.c\
 			 ft_memcmp.c\
 			 ft_memchr.c\
+			 ft_calloc.c\
+			 ft_strdup.c\
+			 ft_substr.c\
+			 ft_strjoin.c\
 			 ft_atoi.c\
+			 ft_strnstr.c\
+			 ft_putchar_fd.c\
+			 ft_putstr_fd.c\
+			 ft_putendl_fd.c\
+			 ft_striteri.c\
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
