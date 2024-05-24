@@ -6,7 +6,7 @@
 /*   By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 16:12:26 by bemacho-          #+#    #+#             */
-/*   Updated: 2024/04/24 16:33:44 by bemacho-         ###   ########.fr       */
+/*   Updated: 2024/05/16 13:52:54 by bemacho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
+	int		i;
 
 	i = 0;
 	if (!s)
-		return;
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);

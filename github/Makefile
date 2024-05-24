@@ -6,7 +6,7 @@
 #    By: bemacho- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/12 15:16:30 by bemacho-          #+#    #+#              #
-#    Updated: 2024/04/24 17:57:11 by bemacho-         ###   ########.fr        #
+#    Updated: 2024/05/24 14:16:20 by bemacho-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,11 @@ MY_SOURCES = ft_isalpha.c \
 			 ft_putstr_fd.c\
 			 ft_putendl_fd.c\
 			 ft_striteri.c\
+			 ft_putnbr_fd.c\
+			 ft_itoa.c\
+			 ft_strmapi.c\
+			 ft_strtrim.c\
+			 ft_split.c\
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
@@ -49,10 +54,11 @@ CFLAGS = -Wall -Werror -Wextra
 $(NAME): $(MY_OBJECTS)
 		$(AR) rcs $(NAME) $(MY_OBJECTS)
 
-clean: -Rf $(MY_OBJECTS)
+clean: 
+	rm -Rf $(MY_OBJECTS)
 
 fclean: clean
-	-f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 # Le dice al make que estos nombre no son archivos
