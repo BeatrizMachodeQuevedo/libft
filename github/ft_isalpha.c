@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <ctype.h>
-//#include <stdio.h>
+#include <ctype.h>
+#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -21,23 +21,23 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-/*int	main(void)
+int	main(void)
 {
-	int	x;
-	int	y;
+	int	x = 'B';
+	int	y = '1';
 	int	result1;
 	int	result2;
 	int	result3;
 	int	result4;
 
-	x = 'B';
-	y = '?';
 	result1 = ft_isalpha(x);
 	result2 = ft_isalpha(y);
 	result3 = isalpha(x);
 	result4 = isalpha(y);
-	printf("%d.\n", result1);
-	printf("%d.\n", result2);
-	printf("%d.\n", result3);
-	printf("%d.\n", result4);
-}*/
+	if (result1 == 1)
+		printf("%d.\n Es Alpha", x);
+		else printf("%d. no es alpha", x);
+	printf("%d devuelve 0.\n", result2);
+	printf("%d.\n devuelve distinto a zero", result3);
+	printf("%d.\n devuelve 0", result4);
+}

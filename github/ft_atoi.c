@@ -10,14 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
 	int				i;
 	unsigned int	number;
-	int				signo;
+	int				boolean;
 
 	i = 0;
-	signo = 1;
+	boolean = 1;
 	number = 0;
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\f'
 		|| str[i] == '\r' || str[i] == '\v' || str[i] == ' ')
@@ -26,7 +28,7 @@ int	ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 		{
-			signo = -1;
+			boolean = -1;
 			i++;
 		}
 	}
@@ -35,6 +37,6 @@ int	ft_atoi(const char *str)
 		number = number * 10 + (str[i] - '0');
 		i++;
 	}
-	number = signo * number;
+	number = boolean * number;
 	return (number);
 }

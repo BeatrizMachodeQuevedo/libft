@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 #include <stddef.h>
 
 void	*ft_memset(void *dest, int c, size_t n)
@@ -28,8 +28,9 @@ void	*ft_memset(void *dest, int c, size_t n)
 	}
 	return (dest);
 }
-/*int	main(void)
+int	main(void)
 {
 	char x[] = "this is a test molon";
-	printf("%s.\n", ft_memset(x, '*', 4));
-}*/
+	ft_memset(x, '*', 4);
+	printf("%s.\n",x);
+}
